@@ -1,0 +1,12 @@
+
+syntax = "proto3";
+
+option java_package = "com.sabufung.base.di.data";
+option java_multiple_files = true;
+
+message UserPreferences {
+  // Each map is used to store a set of string IDs. The bool has no meaning, but proto3 doesn't
+  // have a Set type so this is the closest we can get to a Set.
+  map<string, bool> bookmarked_property_ids = 1;
+  bool show_completed = 2;
+}
